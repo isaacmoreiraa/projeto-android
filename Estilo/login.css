@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #1a365c, #3d97dc);
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 5px 15px 35px black;
+}
+
+.form h1 {
+    color: #1a365c;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.form form {
+    padding: 0 40px;
+}
+
+.form form .text-field {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid black;
+}
+
+.form form .text-field input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 16px;
+}
+
+.form form .text-field label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.form form .text-field input:focus ~ label,
+.form form .text-field input:valid ~ label {
+    top: -5px;
+    color: #1a365c;
+}
+
+.form form .text-field span::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #1a365c;
+    transition: 0.3s;
+}
+
+.form form .text-field input:focus ~ span::after,
+.form form .text-field input:valid ~ span::after {
+    width: 100%;
+}
+
+.form form .pass {
+    color: #999;
+    margin: -5px 0 20px 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.form form .pass:hover {
+    text-decoration: underline;
+}
+
+.form form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: #1a365c;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.form form input[type="submit"]:hover {
+    border-color: #1a365c;
+    color: #3d97dc;
+    box-shadow: 0px 1px 4px black;
+}
+
+.form form .signup-link {
+    margin: 20px 0;
+    text-align: center;
+    color: #999;
+    font-size: 15px;
+}
+
+.form form .signup-link a {
+    color: #3d97dc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.form form .signup-link a:hover {
+    color: #528fbd;
+    transform: scale(1.1);
+}
